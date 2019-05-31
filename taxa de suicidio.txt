@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     NewRelation
+Instances:    27820
+Attributes:   2
+              country
+              suicides/100k pop
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 9
+Within cluster sum of squared errors: 27199.26718555748
+
+Initial starting points (random):
+
+Cluster 0: Iceland,0
+Cluster 1: Paraguay,16
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                           Cluster#
+Attribute                       Full Data         0         1
+                                (27820.0) (23750.0)  (4070.0)
+=============================================================
+country                           Austria   Iceland  Paraguay
+suicides/100k pop                   12.41    6.5033   46.8776
+
+
+
+
+Time taken to build model (full training data) : 0.24 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      23750 ( 85%)
+1       4070 ( 15%)
+
